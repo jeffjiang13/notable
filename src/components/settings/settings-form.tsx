@@ -235,14 +235,9 @@ const SettingsForm = () => {
         return;
       }
 
-      const { data: publicUrlData, error: publicUrlError } = await supabase.storage
+      const { data: publicUrlData } = await supabase.storage
         .from('avatars')
         .getPublicUrl(uploadData.path);
-
-      if (publicUrlError) {
-        console.error('Error getting public URL:', publicUrlError.message);
-        return;
-      }
 
       const avatarUrl = publicUrlData.publicUrl;
 
@@ -256,8 +251,12 @@ const SettingsForm = () => {
       } else {
         console.log('User updated successfully:', userData);
       }
-    } catch (error) {
-      console.error('Error in onChangeProfilePicture:', error.message);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.error('Error in onChangeProfilePicture:', error.message);
+      } else {
+        console.error('An unknown error occurred in onChangeProfilePicture');
+      }
     } finally {
       setUploadingProfilePic(false);
     }
