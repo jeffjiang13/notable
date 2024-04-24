@@ -25,6 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <link rel="icon" href="/favicon.ico0" />
       <body className={twMerge('bg-background', inter.className)}>
         <ThemeProvider
           attribute="class"
