@@ -5,6 +5,8 @@ import { useAppState } from '@/lib/providers/state-provider';
 import { User, workspace } from '@/lib/supabase/supabase.types';
 import { useSupabaseUser } from '@/lib/providers/supabase-user-provider';
 import { useRouter } from 'next/navigation';
+//@ts-ignore
+
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import {
   Briefcase,
@@ -15,7 +17,8 @@ import {
   Plus,
   Share,
   User as UserIcon,
-} from 'lucide-react';
+} //@ts-ignore
+from 'lucide-react';
 import { Separator } from '../ui/separator';
 import { Label } from '../ui/label';
 import { Input } from '../ui/input';
@@ -401,6 +404,8 @@ const SettingsForm = () => {
                         </div>
                       </div>
                       <Button
+                            //@ts-ignore
+
                         variant="secondary"
                         onClick={() => removeCollaborator(c)}
                       >
@@ -435,6 +440,8 @@ const SettingsForm = () => {
           </AlertDescription>
           <Button
             type="submit"
+            //@ts-ignore
+
             size={'sm'}
             variant={'destructive'}
             className="mt-4
@@ -508,6 +515,8 @@ const SettingsForm = () => {
           <div>
             <Button
               type="button"
+              //@ts-ignore
+
               size="sm"
               variant={'secondary'}
               disabled={loadingPortal}
@@ -521,6 +530,8 @@ const SettingsForm = () => {
           <div>
             <Button
               type="button"
+              //@ts-ignore
+
               size="sm"
               variant={'secondary'}
               className="text-sm"

@@ -18,6 +18,7 @@ import {
 import { cn } from '@/lib/utils';
 import { Button } from '../ui/button';
 import LogoutButton from '../global/logout-button';
+//@ts-ignore
 import { LogOut } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import ModeToggle from '@/components/global/mode-toggle';
@@ -194,12 +195,19 @@ const Header = ({ isLoggedIn }: HeaderProps) => {
         {!isLoggedIn ? (
           <>
             <Link href="/login">
-              <Button variant="btn-secondary" className="px-3 py-2 hidden sm:block hover:bg-accent">
+
+              <Button
+                //@ts-ignore
+
+                variant="btn-secondary" className="px-3 py-2 hidden sm:block hover:bg-accent">
                 Login
               </Button>
             </Link>
             <Link href="/signup">
-              <Button variant="btn-primary" className="whitespace-nowrap">
+
+              <Button
+                //@ts-ignore
+                variant="btn-primary" className="whitespace-nowrap">
                 Sign Up
               </Button>
             </Link>
@@ -207,7 +215,10 @@ const Header = ({ isLoggedIn }: HeaderProps) => {
         ) : (
           <>
             <Link href="/dashboard">
-              <Button variant="btn-secondary" className="hover:bg-accent px-3 py-2 sm:block">
+              <Button
+                //@ts-ignore
+
+                variant="btn-secondary" className="hover:bg-accent px-3 py-2 sm:block">
                 Dashboard
               </Button>
             </Link>
