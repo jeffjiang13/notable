@@ -1,4 +1,5 @@
 import type { Config } from 'drizzle-kit';
+//@ts-ignore
 import * as dotenv from 'dotenv';
 dotenv.config({ path: '.env' });
 

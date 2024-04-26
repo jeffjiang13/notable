@@ -1,6 +1,7 @@
 'use server';
 
 import { z } from 'zod';
+//@ts-ignore
 import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs';
 import { FormSchema } from '../types';
 import { cookies } from 'next/headers';

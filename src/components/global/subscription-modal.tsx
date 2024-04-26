@@ -88,6 +88,7 @@ const SubscriptionModal: React.FC<SubscriptionModalProps> = ({ products }) => {
                       <Button
                         onClick={() => onClickContinue(price)}
                         disabled={isLoading}
+                        className='hover:bg-purple-300'
                       >
                         {isLoading ? <Loader /> : 'Upgrade ✨'}
                       </Button>

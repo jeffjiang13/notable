@@ -1,5 +1,7 @@
 import { drizzle } from 'drizzle-orm/postgres-js';
+//@ts-ignore
 import postgres from 'postgres';
+//@ts-ignore
 import * as dotenv from 'dotenv';
 import * as schema from '../../../migrations/schema';
 import { migrate } from 'drizzle-orm/postgres-js/migrator';

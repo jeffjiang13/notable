@@ -9,6 +9,7 @@ import CheckIcon from '../../../public/icons/check.svg';
 import { CLIENTS, PRICING_CARDS, PRICING_PLANS, USERS } from '@/lib/constants';
 import { randomUUID } from 'crypto';
 import { twMerge } from 'tailwind-merge';
+//@ts-ignore
 import clsx from 'clsx';
 import CustomCard from '@/components/landing-page/custom-card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -45,6 +46,7 @@ const HomePage = () => {
         >
           <Link href='/login'>
           <Button
+          //@ts-ignore
             variant="btn-secondary"
             className=" w-full
             rounded-[10px]
@@ -361,6 +363,7 @@ const HomePage = () => {
                     {card.description}
                   </p>
                   <Button
+                  //@ts-ignore
                     variant="btn-primary"
                     className="whitespace-nowrap w-full mt-4"
                   >

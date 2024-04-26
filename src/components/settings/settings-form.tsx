@@ -77,20 +77,24 @@ const SettingsForm = () => {
   const [uploadingLogo, setUploadingLogo] = useState(false);
   const [loadingPortal, setLoadingPortal] = useState(false);
   const [profile, setProfile] = useState<{ avatarUrl: string } | null>(null);
+
   //WIP PAYMENT PORTAL
+
   const redirectToCustomerPortal = async () => {
-    setLoadingPortal(true);
+    setLoadingPortal(true)
+
     try {
       const { url, error } = await postData({
         url: '/api/create-portal-link',
-      });
-      window.location.assign(url);
+      })
+      window.location.assign(url)
     } catch (error) {
-      console.log(error);
-      setLoadingPortal(false);
+      console.log(error)
+    } finally {
+      setLoadingPortal(false)
     }
-    setLoadingPortal(false);
-  };
+  }
+
   //addcollborators
   const addCollaborator = async (profile: User) => {
     if (!workspaceId) return;

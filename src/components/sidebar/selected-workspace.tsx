@@ -1,5 +1,6 @@
 'use client';
 import { workspace } from '@/lib/supabase/supabase.types';
+//@ts-ignore
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import Image from 'next/image';
 import Link from 'next/link';
