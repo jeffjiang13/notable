@@ -3,6 +3,7 @@ import { cookies } from 'next/headers';
 import React from 'react';
 
 import Header from '@/components/landing-page/header';
+import Footer from '@/components/landing-page/footer';
 
 const HomePageLayout = async ({ children }: { children: React.ReactNode }) => {
   const supabase = createServerComponentClient({ cookies });
@@ -17,6 +18,7 @@ const HomePageLayout = async ({ children }: { children: React.ReactNode }) => {
     <main>
       <Header isLoggedIn={isLoggedIn} />
       {children}
+      <Footer />
     </main>
   );
 };
