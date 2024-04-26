@@ -58,8 +58,8 @@ Experience unparalleled team collaboration with Notable, a cutting-edge SaaS pla
 
 Clone the repository:
 ```bash
-git clone https://github.com/your-repository-url.git
-cd notion-clone
+git clone https://github.com/notable.git
+cd notable
 ```
 
 Install dependencies:
