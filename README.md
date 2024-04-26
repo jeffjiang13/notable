@@ -1,8 +1,17 @@
+<div align="center" id="top" className="mb-10">
+<img src="./public/favicon.ico" alt="icon" width="150" height="150" />
 
+&#xa0;
 
-# Notion Clone - Next.js SaaS Application
+  <img src="./public/banner.png" alt="preview" />
 
-Welcome to the Notion Clone, a robust SaaS application designed to facilitate dynamic and real-time collaboration. Built with Next.js 13 and leveraging technologies like Stripe for payments, Drizzle ORM for data management, Tailwind CSS for styling, Supabase for scalable backend services, and WebSockets for real-time interactions, this platform offers an innovative workspace for teams and individuals alike.
+<a href="https://jj-notable.up.railway.app/">Demo</a>
+
+</div>
+
+# Notable - Next.js SaaS Application
+
+Welcome to Notable, Your Premier Notion Clone, a robust SaaS application designed to facilitate dynamic and real-time collaboration. Built with Next.js 13 and leveraging technologies like Stripe for payments, Drizzle ORM for data management, Tailwind CSS for styling, Supabase for scalable backend services, and WebSockets for real-time interactions, this platform offers an innovative workspace for teams and individuals alike.
 
 ## Features
 
@@ -75,7 +84,7 @@ STRIPE_SECRET_KEY=your_stripe_secret_key
 For more detailed information about setup and configuration, visit the [Documentation Page](#).
 
 ## Support
-For support, email us at support@notionclone.com or open an issue in the GitHub repository.
+For support, email me at jeff.jiang13@gmail.com or open an issue in the GitHub repository.
 
 ## Contributing
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
