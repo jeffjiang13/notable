@@ -15,6 +15,45 @@ import CustomCard from '@/components/landing-page/custom-card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { CardContent, CardDescription, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
+
+const components: { title: string; href: string; description: string }[] = [
+  {
+    title: 'Alert Dialog',
+    href: '#',
+    description:
+      'A modal dialog that interrupts the user with important content and expects a response.',
+  },
+  {
+    title: 'Hover Card',
+    href: '#',
+    description:
+      'For sighted users to preview content available behind a link.',
+  },
+  {
+    title: 'Progress',
+    href: '#',
+    description:
+      'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.',
+  },
+  {
+    title: 'Scroll-area',
+    href: '#',
+    description: 'Visually or semantically separates content.',
+  },
+  {
+    title: 'Tabs',
+    href: '#',
+    description:
+      'A set of layered sections of content—known as tab panels—that are displayed one at a time.',
+  },
+  {
+    title: 'Tooltip',
+    href: '#',
+    description:
+      'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.',
+  },
+];
+
 const HomePage = () => {
   return (
     <>
@@ -201,6 +240,79 @@ const HomePage = () => {
         </div>
       </section>
       <section
+  id="features"
+  className="px-4 sm:px-6 flex flex-col items-center mt-20"
+>
+  <TitleSection
+    title="Powerful Features, Unparalleled Productivity"
+    subheading="Discover the comprehensive suite of tools designed to streamline your workflow and boost efficiency."
+    pill="More Features"
+  />
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10">
+    <CustomCard
+      className="bg-white dark:bg-black/40 rounded-lg p- border-brand-primaryPurple/70"
+      cardHeader={
+        <CardTitle className="text-xl font-semibold">
+          Real-Time Collaboration
+        </CardTitle>
+      }
+      cardContent={
+        <CardDescription className="text-gray-500 dark:text-gray-400">
+          Collaborate seamlessly with your team in real-time, enabling
+          simultaneous editing and efficient communication.
+        </CardDescription>
+      }
+    />
+    <CustomCard
+      className="bg-white dark:bg-black/40 rounded-lg p-6 border-brand-primaryPurple/70"
+      cardHeader={
+        <CardTitle className="text-xl font-semibold">
+          Customizable Templates
+        </CardTitle>
+      }
+      cardContent={
+        <CardDescription className="text-gray-500 dark:text-gray-400">
+          Streamline your workflows with customizable templates tailored to your
+          specific needs, saving time and ensuring consistency.
+        </CardDescription>
+      }
+    />
+    <CustomCard
+      className=" rounded-lg p-6 border-brand-primaryPurple/70"
+      cardHeader={
+        <CardTitle className="text-xl font-semibold">
+          Powerful Integrations
+        </CardTitle>
+      }
+      cardContent={
+        <CardDescription className="text-gray-500 dark:text-gray-400">
+          Seamlessly integrate with your favorite tools and services, creating a
+          centralized hub for all your productivity needs.
+        </CardDescription>
+      }
+    />
+    {/* Add more feature cards as needed */}
+  </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10 ">
+    {components.map((component) => (
+      <CustomCard
+        key={component.title}
+        className="bg-white dark:bg-black/40 rounded-lg p-6 border-brand-primaryPurple/70"
+        cardHeader={
+          <CardTitle className="text-xl font-semibold">
+            {component.title}
+          </CardTitle>
+        }
+        cardContent={
+          <CardDescription className="text-gray-500 dark:text-gray-400">
+            {component.description}
+          </CardDescription>
+        }
+      />
+    ))}
+  </div>
+</section>
+      <section
         id='testimonial'
         className="relative">
         <div
@@ -362,6 +474,7 @@ const HomePage = () => {
                   <p className="dark:text-washed-purple-800">
                     {card.description}
                   </p>
+                  <Link href={'/dashboard'}>
                   <Button
                   //@ts-ignore
                     variant="btn-primary"
@@ -371,6 +484,7 @@ const HomePage = () => {
                       ? 'Go Pro'
                       : 'Get Started'}
                   </Button>
+                  </Link>
                 </CardContent>
               }
               cardFooter={
@@ -404,6 +518,54 @@ const HomePage = () => {
           ))}
         </div>
       </section>
+      <section
+  id="resources"
+  className="px-4 sm:px-6 flex flex-col items-center mt-20"
+>
+  <TitleSection
+    title="Explore Our Comprehensive Resources"
+    subheading="Access a wealth of knowledge and tools to enhance your productivity."
+    pill="Resources"
+  />
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10">
+    <CustomCard
+      className="bg-white dark:bg-black/40 rounded-lg p-6 border-brand-primaryPurple/70"
+      cardHeader={
+        <CardTitle className="text-xl font-semibold">Guides</CardTitle>
+      }
+      cardContent={
+        <CardDescription className="text-gray-500 dark:text-gray-400">
+          Comprehensive guides to help you get started and make the most of our
+          platform.
+        </CardDescription>
+      }
+    />
+    <CustomCard
+      className="bg-white dark:bg-black/40 rounded-lg p-6 border-brand-primaryPurple/70"
+      cardHeader={
+        <CardTitle className="text-xl font-semibold">Tutorials</CardTitle>
+      }
+      cardContent={
+        <CardDescription className="text-gray-500 dark:text-gray-400">
+          Step-by-step tutorials covering various features and use cases.
+        </CardDescription>
+      }
+    />
+    <CustomCard
+      className="bg-white dark:bg-black/40 rounded-lg p-6 border-brand-primaryPurple/70"
+      cardHeader={
+        <CardTitle className="text-xl font-semibold">Community</CardTitle>
+      }
+      cardContent={
+        <CardDescription className="text-gray-500 dark:text-gray-400">
+          Connect with other users, share knowledge, and get support from our
+          vibrant community.
+        </CardDescription>
+      }
+    />
+    {/* Add more resource cards as needed */}
+  </div>
+</section>
       <br />
     </>
   );

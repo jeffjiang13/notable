@@ -33,36 +33,36 @@ const routes = [
 const components: { title: string; href: string; description: string }[] = [
   {
     title: 'Alert Dialog',
-    href: '#',
+    href: '#featrues',
     description:
       'A modal dialog that interrupts the user with important content and expects a response.',
   },
   {
     title: 'Hover Card',
-    href: '#',
+    href: '#features',
     description:
       'For sighted users to preview content available behind a link.',
   },
   {
     title: 'Progress',
-    href: '#',
+    href: '#features',
     description:
       'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.',
   },
   {
     title: 'Scroll-area',
-    href: '#',
+    href: '#features',
     description: 'Visually or semantically separates content.',
   },
   {
     title: 'Tabs',
-    href: '#',
+    href: '#features',
     description:
       'A set of layered sections of content—known as tab panels—that are displayed one at a time.',
   },
   {
     title: 'Tooltip',
-    href: '#',
+    href: '#features',
     description:
       'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.',
   },
@@ -112,13 +112,13 @@ const Header = ({ isLoggedIn }: HeaderProps) => {
                     Welcome
                   </span>
                 </li>
-                <ListItem href="#" title="Introduction">
+                <ListItem href="#resources" title="Introduction">
                   Discover reusable components crafted with Radix UI and Tailwind CSS for ultimate design flexibility and efficiency.
                 </ListItem>
-                <ListItem href="#" title="Installation">
+                <ListItem href="#resources" title="Installation">
                   Step-by-step guide to seamlessly install dependencies and configure your app&apos;s structure for optimal development.
                 </ListItem>
-                <ListItem href="#" title="Typography">
+                <ListItem href="#resources" title="Typography">
                   Explore a comprehensive guide to styling text elements, from headings to paragraphs and lists, for clear and attractive layouts.
                 </ListItem>
               </ul>
@@ -152,9 +152,20 @@ const Header = ({ isLoggedIn }: HeaderProps) => {
           </NavigationMenuItem>
 
           {/*
-
+          Features section link
           */}
           <NavigationMenuItem>
+          <NavigationMenuTrigger
+              onClick={() => setPath('#features')}
+              className={cn({
+                'dark:text-white': path === '#features',
+                'dark:text-white/40': path !== '#features',
+                'font-normal': true,
+                'text-xl': true,
+              })}
+            >
+              Features
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                 {components.map((component) => (
