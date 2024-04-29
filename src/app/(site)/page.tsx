@@ -528,6 +528,39 @@ const HomePage = () => {
     pill="Resources"
   />
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10">
+  <CustomCard
+    className="bg-white dark:bg-black/40 rounded-lg p-6 border-brand-primaryPurple/70"
+    cardHeader={
+      <CardTitle className="text-xl font-semibold">Introduction</CardTitle>
+    }
+    cardContent={
+      <CardDescription className="text-gray-500 dark:text-gray-400">
+        Discover reusable components crafted with Radix UI and Tailwind CSS for ultimate design flexibility and efficiency.
+      </CardDescription>
+    }
+  />    <CustomCard
+  className="bg-white dark:bg-black/40 rounded-lg p-6 border-brand-primaryPurple/70"
+  cardHeader={
+    <CardTitle className="text-xl font-semibold">Installation</CardTitle>
+  }
+  cardContent={
+    <CardDescription className="text-gray-500 dark:text-gray-400">
+      Step-by-step guide to seamlessly install dependencies and configure your app&apos;s structure for optimal development.
+      platform.
+    </CardDescription>
+  }
+  />
+  <CustomCard
+  className="bg-white dark:bg-black/40 rounded-lg p-6 border-brand-primaryPurple/70"
+  cardHeader={
+    <CardTitle className="text-xl font-semibold">Typography</CardTitle>
+  }
+  cardContent={
+    <CardDescription className="text-gray-500 dark:text-gray-400">
+      Explore a comprehensive guide to styling text elements, from headings to paragraphs and lists, for clear and attractive layouts.
+    </CardDescription>
+  }
+/>
     <CustomCard
       className="bg-white dark:bg-black/40 rounded-lg p-6 border-brand-primaryPurple/70"
       cardHeader={
