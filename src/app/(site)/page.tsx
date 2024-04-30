@@ -250,7 +250,7 @@ const HomePage = () => {
   />
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10">
     <CustomCard
-      className="bg-white dark:bg-black/40 rounded-lg p- border-brand-primaryPurple/70"
+      className="bg-white dark:bg-black/40 rounded-lg p-6 border-brand-primaryPurple/70"
       cardHeader={
         <CardTitle className="text-xl font-semibold">
           Real-Time Collaboration
