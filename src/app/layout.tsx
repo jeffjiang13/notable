@@ -10,6 +10,7 @@ import AppStateProvider from '@/lib/providers/state-provider';
 import { SupabaseUserProvider } from '@/lib/providers/supabase-user-provider';
 import { Toaster } from '@/components/ui/toaster';
 import { SocketProvider } from '@/lib/providers/socket-provider';
+import ChatbotIframe from '@/components/chatbotIframe';
 
 const inter = DM_Sans({ subsets: ['latin'] });
 
@@ -36,6 +37,7 @@ export default function RootLayout({
               <SocketProvider>
                 {children}
                 <Toaster />
+                <ChatbotIframe />
               </SocketProvider>
             </SupabaseUserProvider>
           </AppStateProvider>
