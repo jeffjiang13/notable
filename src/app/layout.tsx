@@ -29,7 +29,7 @@ export default function RootLayout({
       <body className={twMerge('bg-background', inter.className)}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem
         >
           <AppStateProvider>
