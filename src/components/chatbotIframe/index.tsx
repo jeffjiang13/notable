@@ -21,13 +21,13 @@ console.log(iframe)
       }
     `);
 
-    iframe.src = "http://localhost:3001/chatbot";
+    iframe.src = "https://jj-smartrep.vercel.app/chatbot";
     iframe.classList.add('chat-frame');
 
     document.body.appendChild(iframe);
 
     const handleMessage = (e: MessageEvent) => {
-      if (e.origin !== "http://localhost:3001") return null;
+      if (e.origin !== "https://jj-smartrep.vercel.app") return null;
       try {
         const dimensions = JSON.parse(e.data);
         iframe.style.width = dimensions.width + 'px';
@@ -35,7 +35,7 @@ console.log(iframe)
       } catch (error) {
         console.error('Invalid message data:', e.data);
       }
-      iframe.contentWindow?.postMessage("b77ba080-5537-4a71-bbe5-7b984d16e06c", "http://localhost:3001/");
+      iframe.contentWindow?.postMessage("b77ba080-5537-4a71-bbe5-7b984d16e06c", "https://jj-smartrep.vercel.app/");
     };
 
     window.addEventListener("message", handleMessage);
